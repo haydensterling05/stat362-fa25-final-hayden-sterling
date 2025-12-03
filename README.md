@@ -1,10 +1,10 @@
 # Predicting Market Sector ETF Prices with a Sequential Neural Network 
 
-For Statistics 362: Advanced Machine Learning
+Course: Statistics 362 - Advanced Machine Learning
 
-By Hayden Sterling
+Quarter: Fall 2025
 
-Fall 2025
+Author: Hayden Sterling
 
 ---
 
