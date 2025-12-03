@@ -9,3 +9,17 @@ Author: Hayden Sterling
 ---
 
 This is a repository for my STAT 362 Final Project in the Fall 2025 quarter. 
+
+### Problem Description and Dataset
+
+
+
+### A High-Level Model Description
+
+
+
+### Summary of Key Results 
+
+
+
+### Code Demos
