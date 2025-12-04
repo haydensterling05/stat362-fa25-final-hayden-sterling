@@ -69,9 +69,9 @@ Other results include the contribution of the sentiment data to the model as wel
 
 ## Code Demos
 
-There are two notebooks to run as demos. 
+There are two notebooks to run as demos. The notebooks assume that you have downloaded the news headlines data from the link at the top of this document, although you may also directly import the data from the `cleaned_data/` directory and skip many of the data preprocessing steps. 
 
-The first is a simple exploration of the data, printing interesting visualizations that motivate the analysis and the model's architecture. To run this demo, open the `notebooks/EDA.ipynb` file. Run the first two code cells to import all libraries and necessary functions into the notebook from the `code/` folder (these may need to be manually imported into the notebook if your environment doesn't recognize the `code/` folder as a package). You may then continue to run the code and see how the sentiment features are extracted along with some visualization. 
+The first notebook, titled is a simple exploration of the data, printing interesting visualizations that motivate the analysis and the model's architecture. To run this demo, open the `notebooks/EDA.ipynb` file. Run the first two code cells to import all libraries and necessary functions into the notebook from the `code/` folder (these may need to be manually imported into the notebook if your environment doesn't recognize the `code/` folder as a package). You may then continue to run the code and see how the sentiment features are extracted along with some visualization. 
 
 The second notebook contains code to run an experiment that allows you to compare the model's performance on the 9 ETFs both before and after including the sentiment features in the data. To run this experiment, open the `notebooks/model_demo.ipynb` and run all cells. Again, you must make sure that the functions are being properly imported from the `code/` folder. 
 
