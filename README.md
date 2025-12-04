@@ -42,7 +42,21 @@ In addition to this LSTM model (which is the main deliverable of this project), 
 
 ## Summary of Key Results 
 
-![loss curve](figures/loss_curves.png)
+The model ended its training after 53 epochs due to a plateau in the validation loss. Below is a graph containing two loss curves: training loss and validation loss. 
+
+![learning curve](figures/learning_curve.png)
+
+The loss curves show that the model is effectively learning patterns in the data. There is a sharp decrease in validation loss beteween epochs 1 and 15, indicating that the model is learning significantly during this phase of training. After epoch 20, the learning curve is largely flat, indicating that only incremental progress is being made. The early stopping halting the learning after iteration 53 shows that the model had stopped making significant improvements. Overall, this plot shows that the model learned a relationship between the features and target effectively. 
+
+After validating that this learning occurred, the next step is to evaluate the error (or lack of error) in the model. Firstly, a visual fit for each stock is inspected through the plot below. 
+
+![test predictions vs actual values](figures/fit_inspection.png)
+
+The plot shows that 
+
+Two main evaluation metrics were calculated on the test data to give an unbiased estimate of the model's true error. Root mean squared error ($RMSE$) provides an estimate of the error that is given in terms of the original units of the target, dollars. Thus, this metric is useful because it gives a value for error that has interpretable units. However, $RMSE$ does not provide a good point of comparison between the nine stocks. Since the LSTM model outputs a set of predictions for each ETF, the predictions of each stock are hence evaluated individually. Since the nine ETFs have very distinct scales, their $RMSE$ values may be vastly different while the relative quality of the predictions may actually be quite similar. To address this shortcoming, $R^2$ is used as a secondary evaluation metric. 
+
+
 
 
 ![Alt Text](Image URL or Relative Path)
