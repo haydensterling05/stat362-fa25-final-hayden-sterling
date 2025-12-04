@@ -52,20 +52,26 @@ After validating that this learning occurred, the next step is to evaluate the e
 
 ![test predictions vs actual values](figures/fit_inspection.png)
 
-The plot shows that 
+Many of the sectors have well-fitten predictions, such as XLV, XLI, XLP, and XLU. Others have portions of the test data that appear to be well-fitten, but certain portions have clearly incorrect predictions. To further quantify the error of the model, $RMSE$ and $R^2$ have been calculated. $RMSE$ offers an estimate of the error that is given in terms of the original units of the target, dollars. However, $RMSE$ does not provide a good point of comparison between the nine stocks since the nine ETFs have very distinct scales ($RMSE$ values may be vastly different while the relative quality of the predictions may be quite similar). To address this shortcoming, $R^2$ is used as a secondary, scale-independent evaluation metric. 
 
-Two main evaluation metrics were calculated on the test data to give an unbiased estimate of the model's true error. Root mean squared error ($RMSE$) provides an estimate of the error that is given in terms of the original units of the target, dollars. Thus, this metric is useful because it gives a value for error that has interpretable units. However, $RMSE$ does not provide a good point of comparison between the nine stocks. Since the LSTM model outputs a set of predictions for each ETF, the predictions of each stock are hence evaluated individually. Since the nine ETFs have very distinct scales, their $RMSE$ values may be vastly different while the relative quality of the predictions may actually be quite similar. To address this shortcoming, $R^2$ is used as a secondary evaluation metric. 
+![R2 and RMSE plots](figures/r2_rmse.png)
 
+The results are as follows: 
 
+- Average $RMSE$ across sectors: $3.02
+- Average $R^2$ across sectors: 0.82
 
+The model is predicting the ETF prices well, with an average proportion of variance explained of 0.82 ($R^2$). It is important to note that the model predicts some ETF prices much better than others - the maximum $R^2$ is 0.91 (XLU) and the minimum $R^2$ is 0.71 (XLV). Certain markets can be predicted by the given features better than others. 
 
-![Alt Text](Image URL or Relative Path)
-
-![Alt Text](Image URL or Relative Path)
-
+Other results include the contribution of the sentiment data to the model as well as the model with the attention layer. After creating two models - one that only takes in the financial data and one that takes in both the financial data and the news sentiment data - it becomes evident that the impact of the news sentiment data on the predictions is small and that only some ETFs have show improved predictions as a result of including the sentiment data. This could be due to the fact that all the information contained in the news data is already "priced in" to the current stock price. Creating a model with an attention layer resulted in substantially poorer traning, with the model clearly overfitting. More details on both of these experiments can be found in the presentation. 
 
 ## Code Demos
 
+There are two notebooks to run as demos. 
+
+The first is a simple exploration of the data, printing interesting visualizations that motivate the analysis and the model's architecture. To run this demo, open the `notebooks/EDA.ipynb` file. Run the first two code cells to import all libraries and necessary functions into the notebook from the `code/` folder (these may need to be manually imported into the notebook if your environment doesn't recognize the `code/` folder as a package). You may then continue to run the code and see how the sentiment features are extracted along with some visualization. 
+
+The second notebook contains code to run an experiment that allows you to compare the model's performance on the 9 ETFs both before and after including the sentiment features in the data. To run this experiment, open the `notebooks/model_demo.ipynb` and run all cells. Again, you must make sure that the functions are being properly imported from the `code/` folder. 
 
 
 
