@@ -44,7 +44,7 @@ In addition to this LSTM model (which is the main deliverable of this project), 
 
 The model ended its training after 53 epochs due to a plateau in the validation loss. Below is a graph containing two loss curves: training loss and validation loss. 
 
-![learning curve](figures/learning_curve.png)
+<img src="figures/learning_curve.png" alt="learning curve" width="50%"/>
 
 The loss curves show that the model is effectively learning patterns in the data. There is a sharp decrease in validation loss beteween epochs 1 and 15, indicating that the model is learning significantly during this phase of training. After epoch 20, the learning curve is largely flat, indicating that only incremental progress is being made. The early stopping halting the learning after iteration 53 shows that the model had stopped making significant improvements. Overall, this plot shows that the model learned a relationship between the features and target effectively. 
 
