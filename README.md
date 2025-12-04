@@ -42,6 +42,12 @@ In addition to this LSTM model (which is the main deliverable of this project), 
 
 ## Summary of Key Results 
 
+![loss curve](figures/loss_curves.png)
+
+
+![Alt Text](Image URL or Relative Path)
+
+![Alt Text](Image URL or Relative Path)
 
 
 ## Code Demos
