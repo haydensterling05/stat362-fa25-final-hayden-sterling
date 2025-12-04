@@ -6,6 +6,8 @@ Quarter: Fall 2025
 
 Author: Hayden Sterling
 
+Presentation link: 
+
 ---
 
 This is a repository for my STAT 362 Final Project in the Fall 2025 quarter. 
