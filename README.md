@@ -48,7 +48,7 @@ The model ended its training after 35 epochs due to a plateau in the validation 
 
 <img src="figures/learning_curve_1.png" alt="learning curve" width="50%"/>
 
-The loss curves show that the model is effectively learning patterns in the data. There is a sharp decrease in validation loss beteween epochs 1 and 5, indicating that the model is learning significantly during this phase of training. After epoch 15, the learning curve is largely flat, indicating that only incremental progress is being made. The early stopping halting the learning after iteration 35 shows that the model had stopped making significant improvements. Overall, this plot shows that the model learned a relationship between the features and target effectively. 
+The loss curves above show that the model is effectively learning patterns in the data. There is a sharp decrease in validation loss beteween epochs 1 and 10, indicating that the model is learning significantly during this phase of training. After epoch 30, the learning curve is largely flat, indicating that only incremental progress is being made. The early stopping halting the learning after iteration ~50 shows that the model had stopped making significant improvements. Overall, this plot shows that the model learned a relationship between the features and target effectively, and is also generalizing well as the validation learning curve does not deviate largely from the training learning curve. 
 
 After validating that this learning occurred, the next step is to evaluate the error (or lack of error) in the model. Firstly, a visual fit for each stock is inspected through the plot below. 
 
