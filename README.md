@@ -67,7 +67,7 @@ The results are as follows:
 - Average $RMSE$ across sectors: $3.02
 - Average $R^2$ across sectors: 0.82
 
-The model is predicting the ETF prices well, with an average proportion of variance explained of 0.82 ($R^2$). It is important to note that the model predicts some ETF prices much better than others - the maximum $R^2$ is 0.91 (XLU) and the minimum $R^2$ is 0.71 (XLV). Certain markets can be predicted by the given features better than others. 
+The model is predicting the ETF prices well, with an average proportion of variance explained of 0.82 ($R^2$). It is important to note that the model predicts some ETF prices  better than others - the maximum $R^2$ is 0.91 (XLU) and the minimum $R^2$ is 0.71 (XLV). However, the general variation of $R^2$ values around the average is not extremely high, meaning the sectors' ETF prices are being predicted with relative *consistency*.
 
 Other results include the contribution of the sentiment data to the model as well as the model with the attention layer. After creating two models - one that only takes in the financial data and one that takes in both the financial data and the news sentiment data - it becomes evident that the impact of the news sentiment data on the predictions is small and that only some ETFs have show improved predictions as a result of including the sentiment data. This could be due to the fact that all the information contained in the news data is already "priced in" to the current stock price. Creating a model with an attention layer resulted in substantially poorer traning, with the model clearly overfitting. More details on both of these experiments can be found in the presentation. 
 
