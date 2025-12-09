@@ -6,7 +6,7 @@ Quarter: Fall 2025
 
 Author: Hayden Sterling
 
-Presentation link: ADD LINK HERE
+Presentation is uploaded as a .pptx file above
 
 ---
 
